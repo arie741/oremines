@@ -6,7 +6,9 @@
                  [compojure "1.5.1"]
                  [ring/ring-defaults "0.2.1"]
                  [clj-postgresql "0.4.0"]
-                 [csv-map "0.1.2"]]
+                 [csv-map "0.1.2"]
+                 [dk.ative/docjure "1.11.0"]
+                 [org.clojure/java.jdbc "0.7.0"]]
   :plugins [[lein-ring "0.9.7"]]
   :ring {:handler oremines.handler/app}
   :profiles

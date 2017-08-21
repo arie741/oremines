@@ -6,6 +6,8 @@
 
 (defroutes app-routes
   (GET "/" [] "Hello World")
-  (GET "/:asd" [asd]
-  	(apply str (db/oredata)))
+  (GET "/ores" []
+  	(str (count (db/ores "C:/Users/medy/Downloads/Rekap Disnaker 2.xlsx" "SMK PGRI109"))))
+  (GET "/in" []
+    (db/insertm (db/ores "C:/Users/medy/Downloads/Rekap Disnaker 2.xlsx" "SMK PGRI109")))
   (route/not-found "Not Found"))
